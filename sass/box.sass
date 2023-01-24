@@ -1,0 +1,75 @@
+@mixin boxcenter 
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  padding-top: 50%
+
+.boxes 
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: repeat(3, 1fr)
+  .box img 
+    width: 100%
+    height: 100%
+  
+  .box 
+    background-position: center
+    background-size: cover
+  
+  .box1 a 
+    text-decoration: underline yellow 5px
+ 
+  .box4 a 
+    text-decoration: underline rgb(219, 65, 90) 5px
+ 
+  .box1,
+  .box4 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    h2,
+    p,
+    a 
+      padding: 2rem 5rem
+   
+    h2 
+      font-size: 3rem
+      font-weight: 900
+   
+    p 
+      opacity: 0.5
+   
+    a 
+      font-size: 2rem
+      color: black
+      font-weight: 900
+   
+ 
+  .box5 
+    background-position: center
+    background-size: cover
+    background-image: url(../images/desktop/image-graphic-design.jpg)
+ 
+  .box6 
+    background-position: center
+    background-size: cover 
+    background-image: url(../images/desktop/image-photography.jpg)
+ 
+  .box5,
+  .box6 
+    @include boxcenter
+  
+  .boxtext 
+    height: 50%
+    width: 50%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    h3 
+      font-size: 2rem
+      margin-bottom: 2rem
+   
+ 
