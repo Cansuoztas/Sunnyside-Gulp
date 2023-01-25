@@ -2,15 +2,25 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const csso = require('gulp-csso')
+var minifyCSS= require('gulp-minify-css');
+const concat =require('gulp-concat')
+const sourcemaps =require('gulp-sourcemaps')
 
-gulp.task('sass',()=>{
-return gulp.src('./sass/**/*.sass')
-.pipe(sass())
-.pipe(gulp.dest('./css'))
+
+
+
+gulp.task('css',()=>{
+    return gulp.src('./sass/**/*.sass')
+    .pipe(sass())
+    .pipe(minifyCSS())
+    // .pipe(autoprefixer())
+    .pipe(concat('style.css'))
+    .pipe(gulp.dest('./Css'))
 })
+
 
 gulp.task('watch',()=>{
-    gulp.watch('./sass/**/*.sass',gulp.series('sass'))
+    gulp.watch('./sass/**/*.sass',gulp.series('css'))
 })
- 
-gulp.task('default',gulp.series('watch'))
+gulp.task('default',gulp.series('watch','css'))
