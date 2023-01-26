@@ -1,3 +1,10 @@
+@mixin color() 
+    background-color: rgb(255, 255, 255)
+    color: rgba(0, 0, 0, 0.781)
+
+@mixin color2()
+     color: rgb(255, 255, 255)
+    
 *
   margin: 0
   padding: 0
@@ -22,16 +29,14 @@
       a 
         &:hover 
           padding: 0.5rem
-          background-color: rgba(255, 255, 255, 0.505)
+          @include color()
           border-radius: 10px
-          color: black
         
         padding: 0 1rem
         text-decoration: none
-        color: white
-      
+        @include color2()
     
-  
+
   h1 
     text-align: center
     font-size: 3rem
