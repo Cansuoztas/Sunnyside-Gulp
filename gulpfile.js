@@ -6,7 +6,6 @@ var minifyCSS= require('gulp-minify-css');
 const concat =require('gulp-concat')
 
 
-
 gulp.task('css',()=>{
     return gulp.src('./sass/**/*.sass')
     .pipe(sass())
@@ -16,11 +15,9 @@ gulp.task('css',()=>{
 })
 
 
- 
 gulp.task('watch',()=>{
     gulp.watch('./sass/**/*.sass',gulp.series('css'))
 })
-
 
 
 gulp.task('default',gulp.series('watch','css'))

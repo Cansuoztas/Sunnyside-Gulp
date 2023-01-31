@@ -1,10 +1,19 @@
 @mixin color() 
     background-color: rgb(255, 255, 255)
     color: rgba(0, 0, 0, 0.781)
+    border-radius: 40%
+    opacity: 0.7
+
 
 @mixin color2()
      color: rgb(255, 255, 255)
     
+@mixin color3()
+    background-color: rgba(0, 0, 0, 0.781)
+    color: rgb(255, 255, 255)
+    border-radius: 40%
+    padding: 0.5rem 1.5rem
+    opacity: 0.7
 *
   margin: 0
   padding: 0
@@ -24,20 +33,73 @@
     padding: 2rem
     align-items: center
     font-size: 1.2rem
-    p 
-      gap: 2rem 
-      a 
-        &:hover 
-          padding: 0.7rem
-          @include color()
-          border-radius: 10px
-        
-        padding: 0 1.4rem
-        text-decoration: none
-        @include color2()
-    
+.navigation__list 
+    list-style: none
+    display: flex 
+    margin-top: 1.5rem
 
-  h1 
+.navigation__list li 
+    @include color2()
+    font-family: Arial, Helvetica, sans-serif
+    font-weight: 600
+    margin-right: 15px
+    padding: 8px 16px
+    cursor: pointer
+
+.navigation__list li:hover 
+    @include color()
+  
+.menu__btn 
+    cursor: pointer
+    display: none
+    margin-top: 1.5rem
+    position: absolute
+    right: 7%
+    top: 7%
+
+#mobile__navbar__container 
+    background-color: #fff
+    position: absolute
+    display: none
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    height: 30vh
+    width: 85%
+    margin: 3.5rem auto
+    padding: 1rem
+    left: 0
+    right: 0
+    z-index: 1
+
+#mobile__navbar__container a 
+    display: block
+    text-decoration: none
+    font-family: 'Barlow', sans-serif
+    font-weight: 600
+    margin: 10px 0
+    color: black
+    padding: 0.5rem 1.5rem
+#mobile__navbar__container a:hover 
+  @include color3()
+.toggleClass 
+    display: flex !important
+
+#shape 
+    display: none 
+    width: 0
+    height: 0
+    border-bottom: 38px solid #fff
+    border-left: 30px solid transparent
+    position: absolute
+    right: 7.5%
+    top: 12%
+
+.toggleClassShape 
+    display: block !important
+
+
+h1 
     text-align: center
     font-size: 3rem
     word-spacing: 1rem
@@ -46,7 +108,7 @@
     padding-top: 3rem
     padding-bottom: 6rem
   
-  img 
+img 
     width: 5.5%
     display: flex
     margin: auto

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+  
 
     <link
       rel="icon"
@@ -12,8 +12,9 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Sunnyside agency landing page</title>  
-<link rel="stylesheet" href="./css/style.css">
+
+  <title>Sunnyside agency landing page</title>  
+ <link rel="stylesheet" href="./css/style.css">
 
 
   </head>
@@ -21,14 +22,28 @@
     <main>
       <div class="header">
         <nav class="nav-bar">
-          <p >Sunnyside</p>
+          <p><b>Sunnyside</b> </p>
+          <div class="navigation">
+            <ul class="navigation__list">
+                <li class="list-item">About</li>
+                <li class="list-item">Services</li>
+                <li class="list-item">Projects</li>
+                <li class="list-item">Contact</li>
+            </ul>
+        </div>
+        <img src="./images/icon-hamburger.svg" id="menu__btn" class="menu__btn" >
+    </nav>
+    <div class="hamburger__menu">
+    <div id="shape" class=""></div>
+    <nav id="mobile__navbar__container" class="">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+          
 
-          <p class="menu">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
-          </p>
         </nav>
         <h1>We are creatives</h1>
         <img src="./images/icon-arrow-down.svg" alt="" />
@@ -147,5 +162,6 @@
         </div>
       </footer>
     </main>
+    <script src="./Js/app.js"></script>
   </body>
 </html>
